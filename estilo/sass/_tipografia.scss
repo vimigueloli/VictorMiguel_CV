@@ -1,0 +1,54 @@
+h1,h2,h3,h4,h5,p,a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 12px;
+}
+p{
+    font-weight: 200;
+}
+a{
+    text-decoration: none;
+    color: $white0;
+    font-size: 18px;
+}
+.link{
+    padding: 16px 16px;
+    position: relative;
+    transition: 0.30s ease;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 70%;
+        height: 1px;
+        transform: translate(25%,-50%);
+        background-color: $blue1;
+        transition: 0.5s ease;
+        opacity: 0;
+    }
+    &:hover{
+        color: $blue1;
+        font-size: 16px;
+        &::after{
+            transform: translate(25%,-100%);
+            opacity: 1;
+        }
+    }
+}

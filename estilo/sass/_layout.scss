@@ -1,0 +1,67 @@
+//menu
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px; 
+    align-items: center;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+//container
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 24px;
+}
+.hero{
+    height: 90vh;
+}
+
+//content
+.nome{
+    padding: 30px;
+    margin-top: 45px;
+}
+#n2{
+    padding-left: 7.2%;
+}
+
+.profissao{
+    text-align: right;
+    padding: 30px;
+}
+#p2{
+    padding-right: 13.5%;
+    margin-top: 10px;
+}
+
+.about{
+    text-align: center;
+    padding-right: 3%;
+}
+.sobre{
+    margin-bottom: 2px;
+    color: $blue1;
+}
+#projBntt{
+    margin-top: 35px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .hero{
+        height: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .profissao{
+        margin-top: 50px;
+    }
+    
+}
