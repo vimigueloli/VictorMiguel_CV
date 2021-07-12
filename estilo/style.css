@@ -24,10 +24,11 @@ header::after {
   display: block;
   background: -webkit-gradient(linear, left top, left bottom, from(#040404), color-stop(15.1%, rgba(4, 4, 4, 0.9375)), to(rgba(4, 4, 4, 0)));
   background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0.9375) 15.1%, rgba(4, 4, 4, 0) 100%);
-  width: 100%;
+  width: 98.6%;
   height: 10vh;
-  -webkit-transform: translate(-1%, 10vh);
-          transform: translate(-1%, 10vh);
+  -webkit-transform: translate(0%, 10vh);
+          transform: translate(0%, 10vh);
+  margin-left: auto;
   position: absolute;
 }
 
@@ -69,14 +70,14 @@ header::after {
 .bg-hero::after {
   content: '';
   display: block;
-  background-color: #040404;
   width: 150%;
-  height: 50vh;
-  -webkit-transform: translate(-5%, 70vh);
-          transform: translate(-5%, 70vh);
+  height: 15vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 4, 4, 0)), color-stop(53.65%, #040404));
+  background: linear-gradient(180deg, rgba(4, 4, 4, 0) 0%, #040404 53.65%);
+  -webkit-transform: translate(-5%, 85vh);
+          transform: translate(-5%, 85vh);
   position: absolute;
-  -webkit-filter: blur(45px);
-          filter: blur(45px);
+  z-index: 1;
 }
 
 .full-screen {
@@ -84,8 +85,8 @@ header::after {
 }
 
 .svg-hero {
-  -webkit-transform: scale(3) rotate(-35deg) translate(0%, 0%);
-          transform: scale(3) rotate(-35deg) translate(0%, 0%);
+  -webkit-transform: scale(3) rotate(-35deg) translate(0%, -3%);
+          transform: scale(3) rotate(-35deg) translate(0%, -3%);
 }
 
 .nome {
@@ -111,7 +112,7 @@ header::after {
 .about {
   text-align: center;
   padding-right: 3%;
-  margin-top: 30px;
+  margin-top: 15vh;
 }
 
 .sobre {
@@ -176,17 +177,67 @@ header::after {
             flex-direction: column;
   }
   .profissao {
-    margin-top: 50px;
+    margin-top: 30vh;
   }
   .svg-hero {
     -webkit-transform: scale(5) rotate(-50deg);
             transform: scale(5) rotate(-50deg);
   }
   .bg-hero::after {
+    -webkit-transform: translate(-5%, 86vh);
+            transform: translate(-5%, 86vh);
     width: 150%;
   }
   .nome {
     margin-top: 50px;
+  }
+  .about {
+    margin-top: 30vh;
+  }
+  .sobre {
+    margin-top: 0vh;
+  }
+}
+
+#frente {
+  -webkit-animation: move 3s ease infinite alternate;
+          animation: move 3s ease infinite alternate;
+}
+
+#onda1 {
+  -webkit-animation: move 5s ease infinite alternate;
+          animation: move 5s ease infinite alternate;
+}
+
+#onda2 {
+  -webkit-animation: move 4s ease infinite alternate;
+          animation: move 4s ease infinite alternate;
+}
+
+#onda3 {
+  -webkit-animation: move 6s ease infinite alternate;
+          animation: move 6s ease infinite alternate;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(-5vh, 0%);
+            transform: translate(-5vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(5vh, 0%);
+            transform: translate(5vh, 0%);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translate(-5vh, 0%);
+            transform: translate(-5vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(5vh, 0%);
+            transform: translate(5vh, 0%);
   }
 }
 

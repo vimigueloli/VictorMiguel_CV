@@ -9,9 +9,10 @@ header{
         content: '';
         display: block;
         background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0.9375) 15.1%, rgba(4, 4, 4, 0) 100%);
-        width: 100%;
+        width: 98.6%;
         height: 10vh;
-        transform: translate(-1%,10vh);
+        transform: translate(0%,10vh);
+        margin-left: auto;
         position: absolute;
     }
 }
@@ -54,19 +55,19 @@ header{
     &::after{
         content: '';
         display: block;
-        background-color: $black0;
         width: 150%;
-        height: 50vh;
-        transform: translate(-5%,70vh);
+        height: 15vh;
+        background: linear-gradient(180deg, rgba(4, 4, 4, 0) 0%, #040404 53.65%);
+        transform: translate(-5%,85vh);
         position: absolute;
-        filter: blur(45px);
+        z-index: 1;
     }
 }
 .full-screen{
     width: 100%;
 }
 .svg-hero{
-    transform: scale(3) rotate(-35deg) translate(0%,0%);
+    transform: scale(3) rotate(-35deg) translate(0%,-3%);
 }
 
 //content
@@ -91,7 +92,7 @@ header{
 .about{
     text-align: center;
     padding-right: 3%;
-    margin-top: 30px;
+    margin-top: 15vh;
 }
 .sobre{
     margin-bottom: 10px;
@@ -135,7 +136,7 @@ header{
     }
 }
 
-
+//portabilidade
 
 @media screen and (max-width: 1200px){
     .hero{
@@ -145,17 +146,49 @@ header{
         flex-direction: column;
     }
     .profissao{
-        margin-top: 50px;
+        margin-top: 30vh;
     }
     .svg-hero{
         transform: scale(5) rotate(-50deg)
     }
     .bg-hero{
         &::after{
+            transform: translate(-5%,86vh);
             width: 150%;
         }
     }
     .nome{
         margin-top:50px;
+    }
+    .about{
+        margin-top: 30vh;
+    }
+    .sobre{
+        margin-top: 0vh;
+    }
+    
+}
+
+//animações
+
+#frente{
+    animation: move 3s ease infinite alternate;
+}
+#onda1{
+    animation: move 5s ease infinite alternate;
+}
+#onda2{
+    animation: move 4s ease infinite alternate;
+}
+#onda3{
+    animation: move 6s ease infinite alternate;
+}
+
+@keyframes move{
+    0%{
+        transform: translate(-5vh,0%);
+    }
+    100%{
+        transform: translate(5vh,0%);
     }
 }

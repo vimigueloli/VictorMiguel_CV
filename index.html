@@ -116,13 +116,15 @@
         </div>
         <section class="full-screen border">
             <section class="container hero border">
-                <div class="nome border">
-                    <h1 id="n1">VICTOR</h1>
-                    <h1 id="n2">MIGUEL</h1>
-                </div>
-                <div class="profissao border">
-                    <h2 id="p1">Programação</h2>
-                    <h2 id="p2">& Design</h2>
+                <div class="main">
+                    <div class="nome border">
+                        <h1 id="n1">VICTOR</h1>
+                        <h1 id="n2">MIGUEL</h1>
+                    </div>
+                    <div class="profissao border">
+                        <h2 id="p1">Programação</h2>
+                        <h2 id="p2">& Design</h2>
+                    </div>
                 </div>
                 <div class="about border">
                     <h3 class="sobre">Sobre</h3>
@@ -144,7 +146,40 @@
                 .from(".logo",{
                     duration: 1,
                     opacity: 0,
-                    delay: 1,
+                    delay: 0.5,
+                    y: 15,
+                    ease: "power3.out"
+                })
+                .from(".link",{
+                    duration: 0.3,
+                    opacity: 0,
+                    delay: 0.3,
+                    ease: "power3.out"
+                })
+                .from(".main",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    x: 15,
+                    ease: "power3.out"
+                },"-=1")
+                .from(".svg-hero",{
+                    delay:0.5,
+                    opacity: 0.5,
+                    duration: 0.5,
+                })
+
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.from(".about",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    y: -30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".about",
+                    }
                 })
             })
         </script>
