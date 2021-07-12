@@ -3,8 +3,17 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 16px; 
+    padding: 15px 16px; 
     align-items: center;
+    &::after{
+        content: '';
+        display: block;
+        background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0.9375) 15.1%, rgba(4, 4, 4, 0) 100%);
+        width: 100%;
+        height: 10vh;
+        transform: translate(-1%,10vh);
+        position: absolute;
+    }
 }
 
 .logo{
@@ -25,10 +34,45 @@ header{
     height: 90vh;
 }
 
+
+//fundo
+.relative{
+    position: relative;
+
+}
+.bg-hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+
+    &::after{
+        content: '';
+        display: block;
+        background-color: $black0;
+        width: 150%;
+        height: 50vh;
+        transform: translate(-5%,70vh);
+        position: absolute;
+        filter: blur(45px);
+    }
+}
+.full-screen{
+    width: 100%;
+}
+.svg-hero{
+    transform: scale(3) rotate(-35deg) translate(0%,0%);
+}
+
 //content
 .nome{
     padding-left: 30px;
-    margin-top: 45px;
+    margin-top: 30vh;
 }
 #n2{
     padding-left: 7.2%;
@@ -37,6 +81,7 @@ header{
 .profissao{
     text-align: right;
     padding-right: 30px;
+    margin-top: 12vh;
 }
 #p2{
     padding-right: 13.5%;
@@ -49,23 +94,44 @@ header{
     margin-top: 30px;
 }
 .sobre{
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     color: $blue1;
+    margin-top: 12vh;
 }
 .bntt{
-    margin-top: 50px;
+    margin-top: 100px;
+    padding-bottom: 15vh;
 }
 
 .botao{
     transition: 0.30s ease;
     padding: 0;
-    font-size: 3vh;
+    font-size: 2vh;
     color: $blue0;
     backdrop-filter: blur(299px);
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 12vh;
+        height: 12vh;
+        transform: translate(-9.5%,-60%);
+        transition: 0.5s ease;
+        opacity: 1;
+        border: 1px solid $glow;
+        border-radius: 100%;
+    }
     &:hover{
         font-size: 2vh;
-        box-shadow: 3px 30px 20px 0px #22449973;
+        box-shadow: 3px 30px 20px 0px #2244993a;
         color: $white0;
+        &::after{
+            border-color: $white1;
+            filter: blur(15px);
+        }
+
     }
 }
 
@@ -81,5 +147,15 @@ header{
     .profissao{
         margin-top: 50px;
     }
-    
+    .svg-hero{
+        transform: scale(5) rotate(-50deg)
+    }
+    .bg-hero{
+        &::after{
+            width: 150%;
+        }
+    }
+    .nome{
+        margin-top:50px;
+    }
 }

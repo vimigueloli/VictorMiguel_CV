@@ -13,10 +13,22 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 16px;
+  padding: 15px 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header::after {
+  content: '';
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#040404), color-stop(15.1%, rgba(4, 4, 4, 0.9375)), to(rgba(4, 4, 4, 0)));
+  background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0.9375) 15.1%, rgba(4, 4, 4, 0) 100%);
+  width: 100%;
+  height: 10vh;
+  -webkit-transform: translate(-1%, 10vh);
+          transform: translate(-1%, 10vh);
+  position: absolute;
 }
 
 .logo {
@@ -34,9 +46,51 @@ header {
   height: 90vh;
 }
 
+.relative {
+  position: relative;
+}
+
+.bg-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+}
+
+.bg-hero::after {
+  content: '';
+  display: block;
+  background-color: #040404;
+  width: 150%;
+  height: 50vh;
+  -webkit-transform: translate(-5%, 70vh);
+          transform: translate(-5%, 70vh);
+  position: absolute;
+  -webkit-filter: blur(45px);
+          filter: blur(45px);
+}
+
+.full-screen {
+  width: 100%;
+}
+
+.svg-hero {
+  -webkit-transform: scale(3) rotate(-35deg) translate(0%, 0%);
+          transform: scale(3) rotate(-35deg) translate(0%, 0%);
+}
+
 .nome {
   padding-left: 30px;
-  margin-top: 45px;
+  margin-top: 30vh;
 }
 
 #n2 {
@@ -46,6 +100,7 @@ header {
 .profissao {
   text-align: right;
   padding-right: 30px;
+  margin-top: 12vh;
 }
 
 #p2 {
@@ -60,29 +115,54 @@ header {
 }
 
 .sobre {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   color: #4180CB;
+  margin-top: 12vh;
 }
 
 .bntt {
-  margin-top: 50px;
+  margin-top: 100px;
+  padding-bottom: 15vh;
 }
 
 .botao {
   -webkit-transition: 0.30s ease;
   transition: 0.30s ease;
   padding: 0;
-  font-size: 3vh;
+  font-size: 2vh;
   color: #549CF0;
   -webkit-backdrop-filter: blur(299px);
           backdrop-filter: blur(299px);
 }
 
+.botao::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 12vh;
+  height: 12vh;
+  -webkit-transform: translate(-9.5%, -60%);
+          transform: translate(-9.5%, -60%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
+  border: 1px solid #224499;
+  border-radius: 100%;
+}
+
 .botao:hover {
   font-size: 2vh;
-  -webkit-box-shadow: 3px 30px 20px 0px #22449973;
-          box-shadow: 3px 30px 20px 0px #22449973;
+  -webkit-box-shadow: 3px 30px 20px 0px #2244993a;
+          box-shadow: 3px 30px 20px 0px #2244993a;
   color: #E9EFFF;
+}
+
+.botao:hover::after {
+  border-color: #C0C5D2;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
 }
 
 @media screen and (max-width: 1200px) {
@@ -96,6 +176,16 @@ header {
             flex-direction: column;
   }
   .profissao {
+    margin-top: 50px;
+  }
+  .svg-hero {
+    -webkit-transform: scale(5) rotate(-50deg);
+            transform: scale(5) rotate(-50deg);
+  }
+  .bg-hero::after {
+    width: 150%;
+  }
+  .nome {
     margin-top: 50px;
   }
 }
@@ -125,14 +215,11 @@ h5 {
   font-size: 3vh;
 }
 
-p {
-  font-weight: 200;
-}
-
-a {
+a, p {
   text-decoration: none;
   color: #E9EFFF;
-  font-size: 18px;
+  font-size: 2.3vh;
+  font-weight: 200;
 }
 
 .link {
@@ -153,8 +240,8 @@ a {
   -webkit-transform: translate(25%, -50%);
           transform: translate(25%, -50%);
   background-color: #4180CB;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
   opacity: 0;
 }
 
