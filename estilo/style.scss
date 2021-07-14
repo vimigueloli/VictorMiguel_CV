@@ -16,6 +16,10 @@ body{
     color: $white0;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 @media screen and (max-width: 1220px){
     .menuRight{
         display: none;
@@ -27,7 +31,6 @@ body{
         justify-content: center;
     }
 }
-
 
 .border{
     //border: 1px solid red;

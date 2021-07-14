@@ -5,16 +5,6 @@ header{
     justify-content: space-between;
     padding: 15px 16px; 
     align-items: center;
-    &::after{
-        content: '';
-        display: block;
-        background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0.9375) 15.1%, rgba(4, 4, 4, 0) 100%);
-        width: 98.6%;
-        height: 10vh;
-        transform: translate(0%,10vh);
-        margin-left: auto;
-        position: absolute;
-    }
 }
 
 .logo{
@@ -22,7 +12,19 @@ header{
    //width: 50px;
    height: 8vh;
    width: 8vh;
-
+   position: relative;
+}
+.menuLogo{
+    &::after{
+        content: '';
+        background-color: $glow;
+        z-index: 1;
+        width: 5vh;
+        height: 5vh;
+        filter: blur(40px);
+        position: absolute;
+        transform: translate(-130%, 30%);
+    }
 }
 
 //container
@@ -33,12 +35,24 @@ header{
 }
 .hero{
     height: 90vh;
+    position: relative;
+    
 }
 
 
 //fundo
 .relative{
     position: relative;
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0) 100%);
+        transform: translate(0%,0vh);
+        position: absolute;
+        z-index: 1;
+    }
 
 }
 .bg-hero{
@@ -136,6 +150,21 @@ header{
     }
 }
 
+.contatos{
+    margin-top: 5vh;
+    padding-left: 30px;
+    padding-bottom: 10vh;
+}
+
+.redes{
+    margin-top: 2vh;
+}
+
+.rede{
+    margin-top: 1vh;
+    padding-left: 2vh;
+}
+
 //portabilidade
 
 @media screen and (max-width: 1200px){
@@ -149,7 +178,7 @@ header{
         margin-top: 30vh;
     }
     .svg-hero{
-        transform: scale(5) rotate(-50deg)
+        transform: scale(7) rotate(-55deg) translate(0%,-2.5%);
     }
     .bg-hero{
         &::after{

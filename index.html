@@ -15,14 +15,14 @@
         <header class="border">
             <div class="menuLeft border"> 
                 <a href="" class="link">Home</a>
-                <a href="" class="link">Sobre</a>
+                <a href="#about" class="link">Sobre</a>
             </div>
             <div class="menuLogo border"> 
                 <object class="logo" type="image/svg+xml" data="./assets/logo.svg"></object>
             </div>
             <div class="menuRight border"> 
-                <a href="" class="link">Projetos</a>
-                <a href="" class="link">Contato</a>
+                <a href="" class="link" target="_blank" href="https://github.com/vimigueloli">Projetos</a>
+                <a href="#contatos" class="link">Contato</a>
             </div>
         </header>
         <div class="relative">
@@ -126,13 +126,22 @@
                         <h2 id="p2">& Design</h2>
                     </div>
                 </div>
-                <div class="about border">
+                <div id="about" class="about border">
                     <h3 class="sobre">Sobre</h3>
                     <p>Estudante de engenharia da computação focado<br>na carreira de programador Front-End</p>
                     <div class="bntt">
                         <div class="teste">
                             <a class="botao" target="_blank" href="https://github.com/vimigueloli">PROJETOS</a>
                         </div>
+                    </div>
+                </div>
+                <div id="contatos" class="contatos border">
+                    <h3> Contatos </h3>
+                    <div class="redes border">
+                        <p class="rede">zap: (11)96498-6119</p>
+                        <p class="rede">e-mail: vipeso2016@gmail.com</p>
+                        <p class="rede">insta: @vipeso2016</p>
+                        <p class="rede">linkedin: <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">Victor Miguel</a></p>
                     </div>
                 </div>
             </section>
@@ -165,7 +174,7 @@
                 },"-=1")
                 .from(".svg-hero",{
                     delay:0.5,
-                    opacity: 0.5,
+                    opacity: 0,
                     duration: 0.5,
                 })
 
@@ -179,6 +188,16 @@
                     ease: "power3.out",
                     scrollTrigger:{
                         trigger: ".about",
+                    }
+                })
+                gsap.from(".contatos",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    x: -30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".contatos",
                     }
                 })
             })
