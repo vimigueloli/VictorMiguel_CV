@@ -151,6 +151,58 @@ header{
     }
 }
 
+
+.edicao-foto{
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 2%;
+}
+
+.fotos{
+    margin-top: 5vh;
+    &:hover{
+        .antes{
+            transform: translate(0vh,0%);
+        }
+        .depois{
+            transform: translate(0vh,0%);
+            opacity: 100%;
+            animation: none;
+        }
+    }
+}
+
+
+.antes{
+    height: 75vh;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    z-index: -1;
+    position: relative;
+    transform: translate(20vh,0%);
+}
+.depois{
+
+    height: 75vh;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    z-index: 1;
+    transform: translate(-22.7vh,0%);
+}
+
+
 .contatos{
     margin-top: 5vh;
     padding-left: 30px;
@@ -196,7 +248,22 @@ header{
     .sobre{
         margin-top: 0vh;
     }
+    .subtitle{
+        margin-bottom: 30vh;
+    }
     
+    .fotos{
+        margin-top: 15vh;
+        margin-left: 15vh;
+        
+    }
+
+    .antes{
+        transform: translate(0,0);
+    }
+    .depois{
+        transform: translate(0,-75.5vh);
+    }
 }
 
 //animações
@@ -214,11 +281,28 @@ header{
     animation: move 6s ease infinite alternate;
 }
 
+.depois{
+    animation: show 5s ease infinite;
+}
+
+
 @keyframes move{
     0%{
         transform: translate(-5vh,0%);
     }
     100%{
         transform: translate(5vh,0%);
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
     }
 }

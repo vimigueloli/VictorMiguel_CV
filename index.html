@@ -135,12 +135,19 @@
                         </div>
                     </div>
                 </div>
+                <h3 class="subtitle">Edição de fotos</h3>
+                <div class="edicao-foto border"> 
+                    <div class="fotos border">
+                        <img class="antes" src="./assets/fotos/antes.jpg" />
+                        <img class="depois" src="./assets/fotos/cabine telefone.jpg" />
+                    </div>
+                </div>
                 <div id="contatos" class="contatos border">
                     <h3> Contatos </h3>
                     <div class="redes border">
                         <p class="rede">zap: (11)96498-6119</p>
                         <p class="rede">e-mail: vipeso2016@gmail.com</p>
-                        <p class="rede">insta: @vipeso2016</p>
+                        <p class="rede">insta: <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">@vipeso2016</a></p>
                         <p class="rede">linkedin: <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">Victor Miguel</a></p>
                     </div>
                 </div>
@@ -198,6 +205,26 @@
                     ease: "power3.out",
                     scrollTrigger:{
                         trigger: ".contatos",
+                    }
+                })
+                gsap.from(".subtitle",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    x: +30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".subtitle",
+                    }
+                })
+                gsap.from(".fotos",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    x: +30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".fotos",
                     }
                 })
             })

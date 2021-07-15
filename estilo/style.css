@@ -182,6 +182,71 @@ header {
           filter: blur(15px);
 }
 
+.edicao-foto {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subtitle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 2%;
+}
+
+.fotos {
+  margin-top: 5vh;
+}
+
+.fotos:hover .antes {
+  -webkit-transform: translate(0vh, 0%);
+          transform: translate(0vh, 0%);
+}
+
+.fotos:hover .depois {
+  -webkit-transform: translate(0vh, 0%);
+          transform: translate(0vh, 0%);
+  opacity: 100%;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.antes {
+  height: 75vh;
+  width: auto;
+  border-radius: 10px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: -1;
+  position: relative;
+  -webkit-transform: translate(20vh, 0%);
+          transform: translate(20vh, 0%);
+}
+
+.depois {
+  height: 75vh;
+  width: auto;
+  border-radius: 10px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 1;
+  -webkit-transform: translate(-22.7vh, 0%);
+          transform: translate(-22.7vh, 0%);
+}
+
 .contatos {
   margin-top: 5vh;
   padding-left: 30px;
@@ -228,6 +293,21 @@ header {
   .sobre {
     margin-top: 0vh;
   }
+  .subtitle {
+    margin-bottom: 30vh;
+  }
+  .fotos {
+    margin-top: 15vh;
+    margin-left: 15vh;
+  }
+  .antes {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .depois {
+    -webkit-transform: translate(0, -75.5vh);
+            transform: translate(0, -75.5vh);
+  }
 }
 
 #frente {
@@ -250,6 +330,11 @@ header {
           animation: move 6s ease infinite alternate;
 }
 
+.depois {
+  -webkit-animation: show 5s ease infinite;
+          animation: show 5s ease infinite;
+}
+
 @-webkit-keyframes move {
   0% {
     -webkit-transform: translate(-5vh, 0%);
@@ -269,6 +354,30 @@ header {
   100% {
     -webkit-transform: translate(5vh, 0%);
             transform: translate(5vh, 0%);
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
