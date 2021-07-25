@@ -272,8 +272,8 @@ header {
   position: absolute;
   width: 140%;
   padding-top: 2.4vh;
-  -webkit-animation: move1 15s infinite alternate;
-          animation: move1 15s infinite alternate;
+  -webkit-animation: move1 30s infinite alternate;
+          animation: move1 30s infinite alternate;
 }
 
 .divisor {
@@ -305,10 +305,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ico {
+  margin-left: 2vh;
+}
+
+.info {
+  padding-left: 2vh;
 }
 
 @media screen and (max-width: 1200px) {
@@ -362,21 +369,27 @@ header {
     padding-left: auto;
     padding-right: auto;
     margin: 0;
-    padding-top: 0;
+    padding-top: 3vh;
+    margin-bottom: 3vh;
   }
   .antes {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    height: 50vh;
+    height: 30vh;
     width: auto;
   }
   .depois {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    height: 50vh;
+    height: 30vh;
     width: auto;
     -webkit-animation: none;
             animation: none;
+  }
+  .habilidades {
+    width: 300%;
+    -webkit-animation: move2 40s infinite alternate;
+            animation: move2 40s infinite alternate;
   }
 }
 
@@ -437,6 +450,28 @@ header {
   0% {
     -webkit-transform: translate(-77vh, 0%);
             transform: translate(-77vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(2vh, 0%);
+            transform: translate(2vh, 0%);
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: translate(-154vh, 0%);
+            transform: translate(-154vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(2vh, 0%);
+            transform: translate(2vh, 0%);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    -webkit-transform: translate(-154vh, 0%);
+            transform: translate(-154vh, 0%);
   }
   100% {
     -webkit-transform: translate(2vh, 0%);

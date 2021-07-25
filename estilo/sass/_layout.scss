@@ -221,7 +221,7 @@ header{
     position: absolute;
     width: 140%;
     padding-top: 2.4vh;
-    animation: move1 15s infinite alternate ;
+    animation: move1 30s infinite alternate ;
 }
 
 .divisor{
@@ -251,8 +251,15 @@ header{
     margin-top: 1vh;
     padding-left: 2vh;
     align-items: center;
-    display: block;
-    justify-content: center;
+    display: flex;
+}
+
+.ico{
+    margin-left: 2vh;
+}
+
+.info{
+    padding-left: 2vh;
 }
 
 //portabilidade
@@ -303,20 +310,26 @@ header{
         padding-left: auto;
         padding-right: auto;
         margin: 0;
-        padding-top: 0;
+        padding-top: 3vh;
+        margin-bottom: 3vh;
         
     }
 
     .antes{
         transform: translate(0,0);
-        height: 50vh;
+        height: 30vh;
         width: auto;
     }
     .depois{
         transform: translate(0,0);
-        height: 50vh;
+        height: 30vh;
         width: auto;
         animation: none;
+    }
+    
+    .habilidades{
+        width: 300%;
+        animation: move2 40s infinite alternate
     }
 }
 
@@ -350,6 +363,15 @@ header{
 @keyframes move1{
     0%{
         transform: translate(-77vh,0%);
+    }
+    100%{
+        transform: translate(2vh,0%);
+    }
+}
+
+@keyframes move2{
+    0%{
+        transform: translate(-154vh,0%);
     }
     100%{
         transform: translate(2vh,0%);
