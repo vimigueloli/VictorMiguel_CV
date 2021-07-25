@@ -365,29 +365,41 @@ header {
     padding-top: 0vh;
   }
   .fotos {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-left: auto;
     padding-right: auto;
     margin: 0;
     padding-top: 3vh;
     margin-bottom: 3vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
   .antes {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    height: 30vh;
+    height: 40vh;
     width: auto;
   }
   .depois {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    height: 30vh;
+    height: 40vh;
     width: auto;
     -webkit-animation: none;
             animation: none;
   }
+  .lista {
+    border-top: 3px solid #549CF0;
+    border-bottom: 3px solid #549CF0;
+  }
   .habilidades {
-    width: 300%;
+    width: 600%;
     -webkit-animation: move2 40s infinite alternate;
             animation: move2 40s infinite alternate;
   }
@@ -459,8 +471,8 @@ header {
 
 @-webkit-keyframes move2 {
   0% {
-    -webkit-transform: translate(-154vh, 0%);
-            transform: translate(-154vh, 0%);
+    -webkit-transform: translate(-200vh, 0%);
+            transform: translate(-200vh, 0%);
   }
   100% {
     -webkit-transform: translate(2vh, 0%);
@@ -470,8 +482,8 @@ header {
 
 @keyframes move2 {
   0% {
-    -webkit-transform: translate(-154vh, 0%);
-            transform: translate(-154vh, 0%);
+    -webkit-transform: translate(-200vh, 0%);
+            transform: translate(-200vh, 0%);
   }
   100% {
     -webkit-transform: translate(2vh, 0%);

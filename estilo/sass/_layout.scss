@@ -306,29 +306,37 @@ header{
     }
     
     .fotos{
-        display: block;
+        display: flex;
         padding-left: auto;
         padding-right: auto;
         margin: 0;
         padding-top: 3vh;
         margin-bottom: 3vh;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
         
     }
 
     .antes{
         transform: translate(0,0);
-        height: 30vh;
+        height: 40vh;
         width: auto;
     }
     .depois{
         transform: translate(0,0);
-        height: 30vh;
+        height: 40vh;
         width: auto;
         animation: none;
     }
+
+    .lista{
+        border-top: 3px solid $blue0;
+        border-bottom: 3px solid $blue0;
+    }
     
     .habilidades{
-        width: 300%;
+        width: 600%;
         animation: move2 40s infinite alternate
     }
 }
@@ -371,7 +379,7 @@ header{
 
 @keyframes move2{
     0%{
-        transform: translate(-154vh,0%);
+        transform: translate(-200vh,0%);
     }
     100%{
         transform: translate(2vh,0%);
