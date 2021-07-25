@@ -221,6 +221,7 @@ header{
     position: absolute;
     width: 140%;
     padding-top: 2.4vh;
+    
     animation: move1 30s infinite alternate ;
 }
 
@@ -297,6 +298,7 @@ header{
         margin-top: 0vh;
     }
     .subtitle{
+        margin-top: 3vh;
         margin-bottom: 0vh;
     }
 
@@ -310,8 +312,8 @@ header{
         padding-left: auto;
         padding-right: auto;
         margin: 0;
-        padding-top: 3vh;
-        margin-bottom: 3vh;
+        padding-top: 1vh;
+        margin-bottom: 2vh;
         justify-content: space-around;
         align-items: center;
         width: 100%;
@@ -333,11 +335,17 @@ header{
     .lista{
         border-top: 3px solid $blue0;
         border-bottom: 3px solid $blue0;
+        
+        
     }
     
     .habilidades{
         width: 600%;
         animation: move2 40s infinite alternate
+    }
+    .divisor{
+        height: 15px;
+        width: 15px;
     }
 }
 
@@ -370,19 +378,19 @@ header{
 
 @keyframes move1{
     0%{
-        transform: translate(-77vh,0%);
+        transform: translate(-30%,0%);
     }
     100%{
-        transform: translate(2vh,0%);
+        transform: translate(1%,0%);
     }
 }
 
 @keyframes move2{
     0%{
-        transform: translate(-200vh,0%);
+        transform: translate(-86%,0%);
     }
     100%{
-        transform: translate(2vh,0%);
+        transform: translate(1%,0%);
     }
 }
 
