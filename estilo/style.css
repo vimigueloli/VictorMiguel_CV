@@ -245,6 +245,43 @@ header {
   z-index: 1;
   -webkit-transform: translate(-22.7vh, 0%);
           transform: translate(-22.7vh, 0%);
+  -webkit-animation: show 5s ease infinite;
+          animation: show 5s ease infinite;
+}
+
+.lista {
+  width: 100%;
+  height: 10vh;
+  border-top: 2px solid #549CF0;
+  border-bottom: 2px solid #549CF0;
+  margin-bottom: 5vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.habilidades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 140%;
+  padding-top: 2.4vh;
+  -webkit-animation: move1 15s infinite alternate;
+          animation: move1 15s infinite alternate;
+}
+
+.divisor {
+  width: 10px;
+  height: 10px;
+  content: "";
+  background-color: #549CF0;
+  border-radius: 100%;
 }
 
 .contatos {
@@ -257,14 +294,34 @@ header {
   margin-top: 2vh;
 }
 
+.ico {
+  height: 3vh;
+  width: auto;
+}
+
 .rede {
   margin-top: 1vh;
   padding-left: 2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 1200px) {
   .hero {
     height: 90%;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .container {
     -webkit-box-orient: vertical;
@@ -294,19 +351,32 @@ header {
     margin-top: 0vh;
   }
   .subtitle {
-    margin-bottom: 30vh;
+    margin-bottom: 0vh;
+  }
+  .edicao-foto {
+    margin-top: 0;
+    padding-top: 0vh;
   }
   .fotos {
-    margin-top: 15vh;
-    margin-left: 15vh;
+    display: block;
+    padding-left: auto;
+    padding-right: auto;
+    margin: 0;
+    padding-top: 0;
   }
   .antes {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    height: 50vh;
+    width: auto;
   }
   .depois {
-    -webkit-transform: translate(0, -75.5vh);
-            transform: translate(0, -75.5vh);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 50vh;
+    width: auto;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
@@ -330,11 +400,6 @@ header {
           animation: move 6s ease infinite alternate;
 }
 
-.depois {
-  -webkit-animation: show 5s ease infinite;
-          animation: show 5s ease infinite;
-}
-
 @-webkit-keyframes move {
   0% {
     -webkit-transform: translate(-5vh, 0%);
@@ -354,6 +419,28 @@ header {
   100% {
     -webkit-transform: translate(5vh, 0%);
             transform: translate(5vh, 0%);
+  }
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    -webkit-transform: translate(-77vh, 0%);
+            transform: translate(-77vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(2vh, 0%);
+            transform: translate(2vh, 0%);
+  }
+}
+
+@keyframes move1 {
+  0% {
+    -webkit-transform: translate(-77vh, 0%);
+            transform: translate(-77vh, 0%);
+  }
+  100% {
+    -webkit-transform: translate(2vh, 0%);
+            transform: translate(2vh, 0%);
   }
 }
 
@@ -465,9 +552,11 @@ body::-webkit-scrollbar {
     display: none;
   }
   header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-csontent: center;
   }
+}
+
+.border {
+  border: 1px solid red;
 }
 /*# sourceMappingURL=style.css.map */

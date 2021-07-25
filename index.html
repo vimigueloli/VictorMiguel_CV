@@ -136,19 +136,52 @@
                     </div>
                 </div>
                 <h3 class="subtitle">Edição de fotos</h3>
-                <div class="edicao-foto border"> 
+                <div class="edicao-foto"> 
                     <div class="fotos border">
                         <img class="antes" src="./assets/fotos/antes.jpg" />
                         <img class="depois" src="./assets/fotos/cabine telefone.jpg" />
                     </div>
                 </div>
+                <div class="lista">
+                    <div class="habilidades">
+                        <div class="divisor"></div>
+                        <h5>Javascript</h5>
+                        <div class="divisor"></div>
+                        <h5>HTML5</h5>
+                        <div class="divisor"></div>
+                        <h5>CSS3</h5>
+                        <div class="divisor"></div>
+                        <h5>React</h5>
+                        <div class="divisor"></div>
+                        <h5>React Native</h5>
+                        <div class="divisor"></div>
+                        <h5>Java</h5>
+                        <div class="divisor"></div>
+                        <h5>Python</h5>
+                        <div class="divisor"></div>
+                        <h5>design</h5>
+                        <div class="divisor"></div>
+                        <h5>Photoshop</h5>
+                        <div class="divisor"></div>
+                        <h5>Illustrator</h5>
+                        <div class="divisor"></div>
+                        <h5>After Effects</h5>
+                        <div class="divisor"></div>
+                        <h5>Premiere</h5>
+                        <div class="divisor"></div>
+                        <h5>Adobe XD</h5>
+                        <div class="divisor"></div>
+                        <h5>Figma</h5>
+                        <div class="divisor"></div>
+                    </div>
+                </div>
                 <div id="contatos" class="contatos border">
                     <h3> Contatos </h3>
-                    <div class="redes border">
-                        <p class="rede">zap: (11)96498-6119</p>
-                        <p class="rede">e-mail: vipeso2016@gmail.com</p>
-                        <p class="rede">insta: <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">@vipeso2016</a></p>
-                        <p class="rede">linkedin: <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">Victor Miguel</a></p>
+                    <div class="redes ">
+                        <div class="rede "><img class="ico" src="./assets/whatsapp.png" /> <a>(11)96498-6119</a></div>
+                        <div class="rede "><img class="ico" src="./assets/gmail.png" /> <a>vipeso2016@gmail.com</a></div>
+                        <div class="rede "><img class="ico" src="./assets/instagram.png" /> <a target="blank" href="https://www.instagram.com/vipeso2016/?hl=pt-br">vipeso2016</a></div>
+                        <div class="rede "><img class="ico" src="./assets/linkedin.png" /> <a target="blank" href="https://www.linkedin.com/in/victor-miguel-de-oliveira-58a4a9153/">Victor Miguel</a></div>
                     </div>
                 </div>
             </section>
@@ -222,6 +255,16 @@
                     opacity: 0,
                     delay: 0.5,
                     x: +30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".fotos",
+                    }
+                })
+                gsap.from(".lista",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    y: -30,
                     ease: "power3.out",
                     scrollTrigger:{
                         trigger: ".fotos",
