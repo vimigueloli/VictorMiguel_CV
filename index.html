@@ -119,22 +119,42 @@
                 <div class="main">
                     <div class="nome border">
                         <h1 id="n1">VICTOR</h1>
-                        <h1 id="n2">MIGUEL</h1>
+                        <div id="n2"><spam class="traco">|</spam> <h1> MIGUEL</h1></div>
                     </div>
-                    <div class="profissao border">
+                    <div class="profissao">
                         <h2 id="p1">Programação</h2>
-                        <h2 id="p2">& Design</h2>
+                        <div id="p2"><h2>& Design <spam class="traco2">|</spam></h2></div>
                     </div>
                 </div>
                 <div id="about" class="about border">
                     <h3 class="sobre">Sobre</h3>
-                    <p class="descricao border">Estudante de engenharia da computação focado na carreira de programador Front-End</p>
-                    <div class="bntt">
-                        <div class="teste">
-                            <a class="botao" target="_blank" href="https://github.com/vimigueloli">PROJETOS</a>
+                    <div class="descricao">
+                        <div class="esquerda">
+                            <div><a>Estudante focado na carreira de programador Front-End. Atualmente usa Javascript como linguagem de programação principal e está se adaptando aos frameworks React e ReactNative </a></div>
+                            <div class="loc"><img class="ico" src="./assets/tool.png"><a class="info">São Paulo - Brasil</a></div>
+                        </div>
+                        <div class="direita">
+                            <img class="foto" src="./assets/fotos/cabine telefone.jpg">
                         </div>
                     </div>
+                    
+                    <div class="faculdade">
+                        <h6></h6>
+                        <div class="total"></div>
+                        <div class="progressao"><div class="atual"></div></div>
+                        <h6>Engenharia da Computação - 9º Semestre</h6>
+                    </div>
+                    
                 </div>
+                <!--div class="bntt">
+                    <div class="teste">
+                        <a class="botao" target="_blank" href="https://github.com/vimigueloli">PROJETOS</a>
+                    </div>
+                </div-->
+                <!--div class="projetos">
+                    <h3>Projetos</h3>
+                </div-->
+                <h4 class="habili">Habilidades</h4>
                 <div id="habilidades" class="lista">
                     <div class="habilidades">
                         <div class="divisor"></div>
@@ -206,7 +226,6 @@
                     ease: "power3.out"
                 },"-=1")
                 .from(".svg-hero",{
-                    delay:0.5,
                     opacity: 0,
                     duration: 0.5,
                 })
@@ -244,6 +263,16 @@
                     }
                 })
                 gsap.from(".lista",{
+                    duration: 1,
+                    opacity: 0,
+                    delay: 0.5,
+                    y: -30,
+                    ease: "power3.out",
+                    scrollTrigger:{
+                        trigger: ".lista",
+                    }
+                })
+                gsap.from(".habili",{
                     duration: 1,
                     opacity: 0,
                     delay: 0.5,

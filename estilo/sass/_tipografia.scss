@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5,p,a{
+h1,h2,h3,h4,h5,h6,p,a{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
@@ -17,6 +17,9 @@ h4{
 }
 h5{
     font-size: 3vh;
+}
+h6{
+    font-size: 1.2vh;
 }
 a,p{
     text-decoration: none;

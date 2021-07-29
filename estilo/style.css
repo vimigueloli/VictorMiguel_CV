@@ -112,6 +112,16 @@ header {
 
 #n2 {
   padding-left: 7.2%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.traco {
+  position: absolute;
+  font-size: 7vh;
+  color: #224499;
+  -webkit-transform: translate(-250%, -5%);
+          transform: translate(-250%, -5%);
 }
 
 .profissao {
@@ -123,6 +133,14 @@ header {
 #p2 {
   padding-right: 13.5%;
   margin-top: 10px;
+}
+
+.traco2 {
+  position: absolute;
+  font-size: 7vh;
+  color: #224499;
+  -webkit-transform: translate(150%, -5%);
+          transform: translate(150%, -5%);
 }
 
 .about {
@@ -138,12 +156,101 @@ header {
 }
 
 .descricao {
-  display: inline-block;
-  text-align: center;
-  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.esquerda {
+  text-align: left;
+  margin-right: 8%;
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.foto {
+  height: 45vh;
+  width: auto;
+  border-radius: 10px;
+}
+
+.loc {
+  position: absolute;
+  margin-top: 40vh;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.faculdade {
+  content: '';
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+  margin-bottom: 8vh;
+}
+
+.total {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #2A2929;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: inline-block;
+}
+
+.progressao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vh;
+}
+
+.atual {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: #224499;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: inline-block;
+}
+
+.semestre {
+  font-size: 1.2vh;
 }
 
 .bntt {
@@ -196,11 +303,12 @@ header {
 .lista {
   width: 100%;
   height: 10vh;
-  border-top: 2px solid #549CF0;
-  border-bottom: 2px solid #549CF0;
+  border-top: 2px solid #224499;
+  border-bottom: 2px solid #224499;
   margin-bottom: 5vh;
   position: relative;
   overflow: hidden;
+  margin-top: 2vh;
 }
 
 .habilidades {
@@ -224,7 +332,7 @@ header {
   width: 10px;
   height: 10px;
   content: "";
-  background-color: #549CF0;
+  background-color: #224499;
   border-radius: 100%;
 }
 
@@ -309,20 +417,13 @@ header {
     margin-top: 0;
     padding-top: 0vh;
   }
-  .fotos {
+  .descricao {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-left: auto;
-    padding-right: auto;
-    margin: 0;
-    padding-top: 1vh;
-    margin-bottom: 2vh;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    width: 100%;
+  }
+  .faculdade {
     width: 100%;
   }
   .antes {
@@ -466,29 +567,29 @@ header {
 
 @-webkit-keyframes glow {
   0% {
-    background-color: #12317e6b;
+    background-color: #12317e15;
   }
   50% {
     background-color: #22449900;
   }
   100% {
-    background-color: #12317e6b;
+    background-color: #12317e15;
   }
 }
 
 @keyframes glow {
   0% {
-    background-color: #12317e6b;
+    background-color: #12317e15;
   }
   50% {
     background-color: #22449900;
   }
   100% {
-    background-color: #12317e6b;
+    background-color: #12317e15;
   }
 }
 
-h1, h2, h3, h4, h5, p, a {
+h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
@@ -511,6 +612,10 @@ h4 {
 
 h5 {
   font-size: 3vh;
+}
+
+h6 {
+  font-size: 1.2vh;
 }
 
 a, p {

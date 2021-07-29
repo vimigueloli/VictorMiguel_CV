@@ -92,6 +92,15 @@ header{
 }
 #n2{
     padding-left: 7.2%;
+    align-content: center;
+}
+
+.traco{
+    position: absolute;
+    font-size: 7vh;
+    color: $glow;
+
+    transform:translate(-250%,-5%)
 }
 
 .profissao{
@@ -102,6 +111,14 @@ header{
 #p2{
     padding-right: 13.5%;
     margin-top: 10px;
+}
+
+.traco2{
+    position: absolute;
+    font-size: 7vh;
+    color: $glow;
+
+    transform:translate(+150%,-5%)
 }
 
 .about{
@@ -116,10 +133,78 @@ header{
 }
 
 .descricao{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.esquerda{
+    text-align: left;
+    margin-right: 8%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.foto{
+    height: 45vh;
+    width: auto;
+    border-radius: 10px;
+}
+
+.loc{
+    position: absolute;
+    margin-top: 40vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.faculdade{
+    content: '';
+    width: 50%;
+    justify-content: center;
     display: inline-block;
     text-align: center;
-    width: 40%;
-    align-items: center;
+    padding-top: 0;
+    margin-bottom: 8vh;
+
+}
+
+.total{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $black2;
+    border-radius: 5px;
+    justify-content: center;
+    display: inline-block;
+}
+
+.progressao{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.atual{
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: $glow;
+    border-radius: 5px;
+    justify-content: center;
+    display: inline-block;
+}
+
+.semestre{
+    font-size: 1.2vh;
 }
 
 .bntt{
@@ -166,11 +251,12 @@ header{
 .lista{
     width: 100%;
     height: 10vh;
-    border-top: 2px solid $blue0;
-    border-bottom: 2px solid $blue0;
+    border-top: 2px solid $glow;
+    border-bottom: 2px solid $glow;
     margin-bottom: 5vh;
     position: relative;
     overflow: hidden;
+    margin-top: 2vh;
 }
 
 .habilidades{
@@ -188,7 +274,7 @@ header{
     width: 10px;
     height: 10px;
     content: "";
-    background-color: $blue0;
+    background-color: $glow;
     border-radius: 100%;
 }
 
@@ -266,17 +352,14 @@ header{
         padding-top: 0vh;
     }
     
-    .fotos{
+    .descricao{
         display: flex;
-        padding-left: auto;
-        padding-right: auto;
-        margin: 0;
-        padding-top: 1vh;
-        margin-bottom: 2vh;
-        justify-content: space-around;
-        align-items: center;
         width: 100%;
         
+    }
+
+    .faculdade{
+        width: 100%;
     }
 
     .antes{
@@ -367,12 +450,12 @@ header{
 
 @keyframes glow{
     0%{
-        background-color: #12317e6b;
+        background-color: #12317e15;
     }
     50%{
         background-color: #22449900;
     }
     100%{
-        background-color: #12317e6b;
+        background-color: #12317e15;
     }
 }
