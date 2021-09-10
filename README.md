@@ -14,5 +14,5 @@
 <br/>
 ![GitHub](https://img.shields.io/badge/fonts-Roboto-2cf979?style=plastic)
 
-Apesar de não finalizado o projeto já está online pelo github pages no seguinte link:
+O projeto finalizado pode ser acessado no seguinte link:
 https://vimigueloli.github.io/VictorMiguel_CV/
