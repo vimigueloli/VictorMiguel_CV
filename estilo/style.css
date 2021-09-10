@@ -300,32 +300,45 @@ header {
           filter: blur(15px);
 }
 
-.lista {
+.box {
   width: 100%;
   height: 10vh;
   border-top: 2px solid #224499;
   border-bottom: 2px solid #224499;
   margin-bottom: 5vh;
-  position: relative;
   overflow: hidden;
   margin-top: 2vh;
 }
 
-.habilidades {
+.lista {
+  width: 150%;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  width: 140%;
-  padding-top: 2.4vh;
   -webkit-animation: move1 30s infinite alternate;
           animation: move1 30s infinite alternate;
+}
+
+.habilidades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .divisor {
@@ -403,6 +416,13 @@ header {
   .nome {
     margin-top: 50px;
   }
+  .loc {
+    display: none;
+  }
+  .traco {
+    -webkit-transform: translate(-100%, -5%);
+            transform: translate(-100%, -5%);
+  }
   .about {
     margin-top: 30vh;
   }
@@ -441,10 +461,6 @@ header {
             animation: none;
   }
   .lista {
-    border-top: 3px solid #549CF0;
-    border-bottom: 3px solid #549CF0;
-  }
-  .habilidades {
     width: 600%;
     -webkit-animation: move2 40s infinite alternate;
             animation: move2 40s infinite alternate;
@@ -499,8 +515,8 @@ header {
 
 @-webkit-keyframes move1 {
   0% {
-    -webkit-transform: translate(-30%, 0%);
-            transform: translate(-30%, 0%);
+    -webkit-transform: translate(-35%, 0%);
+            transform: translate(-35%, 0%);
   }
   100% {
     -webkit-transform: translate(1%, 0%);
@@ -510,8 +526,8 @@ header {
 
 @keyframes move1 {
   0% {
-    -webkit-transform: translate(-30%, 0%);
-            transform: translate(-30%, 0%);
+    -webkit-transform: translate(-35%, 0%);
+            transform: translate(-35%, 0%);
   }
   100% {
     -webkit-transform: translate(1%, 0%);
