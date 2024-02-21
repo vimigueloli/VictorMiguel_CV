@@ -239,7 +239,7 @@ header {
 
 .atual {
   content: '';
-  width: 90%;
+  width: 100%;
   height: 2px;
   background-color: #224499;
   border-radius: 5px;
